@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+ <div class="row">
+        <div class="col-sm-3">
+                <h2>{{superhero.picture}}</h2>
+           
+        </div> 
+        <div class="col-sm-3">
+                <h2>{{superhero.name}}</h2>
+                <p class="lead">
+                    {{superhero.description}}
+                </p>
+                <h3> Super pouvoirs :</h3>
+                {% for s in superhero.superpouvoirs %}
+                <span class="label label-default">{{s.name}} </span>
+                {%endfor%}
+        </div>
+ </div>   
+
+    
+{% endblock %}
