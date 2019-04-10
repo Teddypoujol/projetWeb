@@ -8,6 +8,12 @@ var upload = multer({
   dest: __dirname  + '/uploads'
 });
 
+const http = require('http');
+const port=process.env.PORT || 3000
+const server = http.createServer((req, res) => {
+res.statusCode = 200;
+res.setHeader('Content-Type', 'text/html');
+});
 mongoose.connect('mongodb+srv://teddy:1234@cluster0-yvmym.mongodb.net/superheros', {useNewUrlParser: true } );
 /*
 const MongoClient = require('mongodb').MongoClient;
