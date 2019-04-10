@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+    <form method="POST" action="{{endpoint}}" enctype="multipart/form-data" >
+        <div class="form-group">
+            <label for="name">Nom du super héro</label>
+            <input type="text" id="name" name="name" class="form-control" value="{{superhero.name}}">
+        </div>
+        <div class="form-group">
+                <label for="number">Son numéro</label>
+                <input type="number" id="number" name="number" class="form-control" value="{{superhero.number}}">
+        </div>
+        <div class="form-group">
+                <label for="description">Sa description</label>
+                <textarea class="form-control" id="description" name="description" >{{superhero.description}}</textarea>
+        </div>
+
+        <div class="form-group">
+                <label for="file">Image</label>
+                <input type="file" id="file" name="file">
+        </div>
+        
+        <div class="form-group">
+            {% for superpouvoir in superpouvoirs %}
+                <label>
+                    <input type="checkbox" name="superpouvoirs[]" value="{{superpouvoir._id}}" {% if superhero.superpouvoirs.indexOf(superpouvoir._id) != -1 %} checked{% endif %}>
+                    {{superpouvoir.name}}
+                </label>
+            {% endfor %}
+    
+        </div>
+        <input type="submit" class="btn btn-primary" value="Enregistrer">
+    </form>
+{% endblock %}

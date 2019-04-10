@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+       <h2> Les super héros avec le pouvoir <span style="color:{{superpouvoir.color}}">{{superpouvoir.name}}</span></h2>
+       <hr>
+    {% for s in superheros%}
+        <div class="panel panel-default">
+            <div class="panel-primary">
+                <a href='/{{s._id}}' >{{s.name}} n°:{{s.number}}</a>
+            </div>
+            <div class="panel-body">
+                    {{s.description}}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

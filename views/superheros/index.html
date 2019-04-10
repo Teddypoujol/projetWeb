@@ -2,15 +2,17 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <h2> Ma liste </h2>
+    <h2 > Ma liste </h2>
+    <a href="/new" class="btn btn-default" style="background-color: orange">Ajouter un super héro</a>
+    <hr>
     {% for s in superheros%}
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <a href='/{{s._id}}' >{{s.name}} n°:{{s.number}}</a>
+        <div class="d-flex flex-wrap">
+            <div class="class=d-flex flex-wrap">
+                <a href='/{{s._id}}' class="btn btn-primary" style="background-color: grey">{{s.name}} n°:{{s.number}}</a>
+               
+                <hr>
             </div>
-            <div class="panel-body">
-                    {{s.description}}
-            </div>
+            
         </div>
     {% endfor %}
 {% endblock %}

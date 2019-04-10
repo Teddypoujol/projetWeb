@@ -3,16 +3,24 @@
     <title>Mes Super Héros</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    
   </head>
-  <body>
-      <h1 class="text-center"> Mes Héros</h1>
-      <h2 class="text-center"> Super héros  </h2>
+  <body style="background-image: uploads/superheros-marvel.jpg">
+      
+    <div class="container">
+      <a href="/">
+          <h1 class="text-center"> Mes Héros</h1>
+      </a>
+    
+      
+      <h2 class="text-center"> Le super héro </h2>
         {% block content %} {% endblock %}
-    <hr>
-    <div class="text-center">
-        Polytech Marseille
-    </div>
+      <hr>
+      <div class="text-center">
+          Poujol Teddy - Prades Mickael
+      </div>
+  </div>
   </body>
   
 </html>
