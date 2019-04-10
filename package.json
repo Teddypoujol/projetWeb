@@ -1,4 +1,10 @@
 {
+   "scripts": {
+    "start": "node app.js", //il faut que tu définisse un script start : ici donne ta commande pour lancer ton appli
+    //dans ton package.json de ton appli, tu peux l'écrire à la main § C'EST LE PLUS IMPORTANT POUR QUE CA MARCHE
+    "dev": "nodemon -e js,html app.js",
+    "dev2": "nodemon -e js,html,nj --watch app --ignore app/static/css --ignore app/static/js ./dev.js"
+  },
   "name": "superhero",
   "version": "0.3.0",
   "description": "A sample Node.js app using Express 4",
@@ -6,12 +12,7 @@
     "node": "v11.10.0",
     "npm": "6.8.0"
   },
-  "main": "serveur.js",
-  "scripts": {
-    "start": "node serveur.js",
-    "postinstall": "ng build --output-path angularapp  --aot --prod"
-  },
- 
+  "main": "app.js", 
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2",
