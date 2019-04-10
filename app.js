@@ -14,6 +14,11 @@ const server = http.createServer((req, res) => {
 res.statusCode = 200;
 res.setHeader('Content-Type', 'text/html');
 });
+
+
+
+
+
 mongoose.connect('mongodb+srv://teddy:1234@cluster0-yvmym.mongodb.net/superheros', {useNewUrlParser: true } );
 /*
 const MongoClient = require('mongodb').MongoClient;
@@ -44,4 +49,4 @@ nunjucks.configure('views', {
 });
 
 console.log('superhero lancé sur le port 3000');
-app.listen(3000);
+//app.listen(3000);
