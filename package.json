@@ -16,8 +16,7 @@
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "@angular/cli": "^7.1.2",
-    "@angular/compiler-cli": "^6.1.10"
+    
 
   },
   "devDependencies": {
@@ -25,8 +24,7 @@
     "@angular/compiler-cli": "^7.2.12",
     "request": "^2.81.0",
     "tape": "^4.7.0",
-    "@angular/cli": "^7.1.2",
-    "@angular/compiler-cli": "^6.1.10"
+  
   },
   "repository": {
     "type": "git",
