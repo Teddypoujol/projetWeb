@@ -1,7 +1,6 @@
 {
-   "scripts": {
-    "start": "node app.js", //il faut que tu définisse un script start : ici donne ta commande pour lancer ton appli
-    //dans ton package.json de ton appli, tu peux l'écrire à la main § C'EST LE PLUS IMPORTANT POUR QUE CA MARCHE
+  "scripts": {
+    "start": "node app.js",
     "dev": "nodemon -e js,html app.js",
     "dev2": "nodemon -e js,html,nj --watch app --ignore app/static/css --ignore app/static/js ./dev.js"
   },
@@ -12,19 +11,19 @@
     "node": "v11.10.0",
     "npm": "6.8.0"
   },
-  "main": "app.js", 
+  "main": "app.js",
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    
-
+    "mongoose": "^5.5.0",
+    "multer": "^1.4.1",
+    "nunjucks": "^3.2.0"
   },
   "devDependencies": {
     "@angular/cli": "^7.3.8",
     "@angular/compiler-cli": "^7.2.12",
     "request": "^2.81.0",
-    "tape": "^4.7.0",
-  
+    "tape": "^4.7.0"
   },
   "repository": {
     "type": "git",
