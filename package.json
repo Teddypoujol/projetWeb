@@ -1,38 +1,36 @@
 {
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon -e js,html app.js",
-    "dev2": "nodemon -e js,html,nj --watch app --ignore app/static/css --ignore app/static/js ./dev.js"
+    "start": "node app.js"
   },
   "name": "superhero",
-  "version": "0.3.0",
-  "description": "A sample Node.js app using Express 4",
-  "engines": {
-    "node": "v11.10.0",
-    "npm": "6.8.0"
-  },
+  "version": "1.0.0",
+  "description": "cool",
   "main": "app.js",
   "dependencies": {
-    "ejs": "^2.5.6",
-    "express": "^4.15.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "mongoose": "^5.5.0",
     "multer": "^1.4.1",
-    "nunjucks": "^3.2.0"
+    "nunjucks": "^3.2.0",
+    "bootstrap": "^4.3.1"
   },
-  "devDependencies": {
-    "@angular/cli": "^7.3.8",
-    "@angular/compiler-cli": "^7.2.12",
-    "request": "^2.81.0",
-    "tape": "^4.7.0"
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Teddypoujol/projetWeb"
+    "url": "git+https://github.com/Teddypoujol/projetWeb.git"
   },
   "keywords": [
-    "node",
-    "heroku",
-    "express"
+    "cool",
+    "fun",
+    "remi"
   ],
-  "license": "MIT"
+  "author": "teddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Teddypoujol/projetWeb/issues"
+  },
+  "homepage": "https://github.com/Teddypoujol/projetWeb#readme"
 }

@@ -8,18 +8,21 @@ var upload = multer({
   dest: __dirname  + '/uploads'
 });
 
+/*
 const http = require('http');
 const port=process.env.PORT || 3000
 const server = http.createServer((req, res) => {
 res.statusCode = 200;
 res.setHeader('Content-Type', 'text/html');
 });
+*/
 
 
 
 
 
 mongoose.connect('mongodb+srv://teddy:1234@cluster0-yvmym.mongodb.net/superheros', {useNewUrlParser: true } );
+
 /*
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://teddy:1234@cluster0-yvmym.mongodb.net/test?retryWrites=true";
@@ -33,6 +36,7 @@ client.connect(err => {
 
 require('./models/Superhero');
 require('./models/Superpouvoir');
+
 var app = express();
 app.use(bodyparser.urlencoded());
 app.use(upload.single('file'));
@@ -48,5 +52,7 @@ nunjucks.configure('views', {
     express: app
 });
 
-console.log('superhero lancé sur le port 3000');
-//app.listen(3000);
+
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
